@@ -1,0 +1,32 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <img class="mat-toolbar-logo" src="https://medios.marketbi.co/market/images/logo.jpg" />
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon">verified_user</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="loginBox">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Acceso Restringido</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="loginForm" [formGroup]="loginForm">
+      <mat-form-field >
+        <input matInput  placeholder="Username" formControlName="username"  >
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Contraseña" [type]="hide ? 'text' : 'password'" formControlName="password">
+          <mat-error >Error de Usuario o Contraseña</mat-error>
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          
+        </mat-form-field>
+    </form>
+    <mat-spinner  [style.display]="!loader ? 'block' : 'none'" ></mat-spinner>
+   
+   <mat-card-actions>
+     <button mat-raised-button (click)="loginGo()" color="primary">Login</button>
+   </mat-card-actions>
+  </mat-card-content>
+</mat-card>
+</div>

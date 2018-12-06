@@ -1,0 +1,19 @@
+.homeCard
+{
+    width: 600px;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.homeCard img{
+    width:200px;
+    margin: auto;
+    display: block;
+}
+mat-card-content{
+    text-align: center;
+}
+mat-card-header{
+    width: 100% !important;
+}
+.mat-card-header { justify-content: center;
+text-align: center; }
