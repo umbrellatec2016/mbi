@@ -40,3 +40,9 @@
     /* Support for IE. */
     font-feature-settings: 'liga';
   }
+  body{
+      min-width: 1400px !important;
+  }
+.wrapper{
+    min-width: 1400px;
+}

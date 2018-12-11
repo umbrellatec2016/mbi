@@ -1,0 +1,53 @@
+
+.icons {
+  padding: 0 14px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+.mat-toolbar-logo{
+    
+    max-height: 62px;
+}
+.name{
+    font-size: 12px;
+}
+.content
+{
+  width: 100%;
+}
+.bar{
+  border-right: 1px rgba(193, 245, 7, 0.356) solid;
+  height: 800px;
+  width: 200px;
+  display: inline-block;
+  
+  padding-right: 3px;
+}
+.contentall{
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  align-items: initial;
+  vertical-align: top;
+  
+  width:calc(100% - 205px) !important;
+  
+}
+
+.mat-expansion-panel-header{
+  padding: 0 4px !important;
+}
+mat-list-item{
+  cursor: pointer;
+  width: 100% !important;
+  margin:0 !important;
+}
+mat-list-item:hover{
+  background: rgb(223, 220, 220);
+}
+.mat-expansion-panel-body
+{
+  padding: 0px 0px 0px !important;
+}

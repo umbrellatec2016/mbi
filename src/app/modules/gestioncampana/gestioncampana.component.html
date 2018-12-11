@@ -1,0 +1,15 @@
+<div class="main">
+  Por favor seleccione la campaña para iniciar Gestion
+  <form class="form" [formGroup]="campanaForm">
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Campaña" aria-label="Assignee" matInput formControlName="campana" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          <b>{{option.id}}</b> {{option.nombre}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field><br/>
+    <button class="button" mat-button color="primary" (click)="Start()">Iniciar Gestion</button>
+  </form>
+  
+</div>

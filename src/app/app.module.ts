@@ -11,20 +11,32 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormControl,FormGroup,ReactiveFormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material';
+import {MatInputModule, MatListModule} from '@angular/material';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {LoginService} from './common/services/s.login.service';
-import { HttpClientModule } from '@angular/common/http';  // replaces previous Http service
+import { HttpClientModule } from '@angular/common/http';
+import { FrontComponent } from './modules/front/front.component';  // replaces previous Http service
+import {MatExpansionModule} from '@angular/material/expansion';
+import { GestioncampanaComponent } from './modules/gestioncampana/gestioncampana.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { OngestionComponent } from './modules/ongestion/ongestion.component';
 
 const Routes:Routes=[
   {path:'',component:HomeComponent},
-  {path:'login', component:LoginComponent}
+  {path:'login', component:LoginComponent},
+  {path:'front',component:FrontComponent,children:[{
+      path:'gestionCampana', component:GestioncampanaComponent, outlet:'content'},
+    { path:'onGestion', component:OngestionComponent, outlet:'content'}
+  ]}
 ];
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
+    FrontComponent,
+    GestioncampanaComponent,
+    OngestionComponent,
     
   ],
   imports: [
@@ -40,7 +52,10 @@ const Routes:Routes=[
     MatInputModule,
     MatProgressSpinnerModule,
     
-    HttpClientModule
+    HttpClientModule,
+    MatExpansionModule,
+    MatListModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

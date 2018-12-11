@@ -1,0 +1,22 @@
+.main{
+    margin: auto;
+    width: 100%;
+    min-height: 400px;
+    text-align: center;
+    margin-top:90px; 
+    font-family: roboto;
+}
+.form{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 60px;
+}
+.example-full-width
+{
+    width: 600px;
+    margin: auto;
+}
+.mat-autocomplete-visible {
+    min-width: 600px !important;
+}

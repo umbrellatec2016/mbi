@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {IUserWS} from '../interfaces/i.user.cmp'
+import {IUserWS, IUser} from '../interfaces/i.user.cmp'
 import { HttpClient,HttpHeaders, HttpParams } from '@angular/common/http';
 
 
@@ -9,6 +9,7 @@ import { HttpClient,HttpHeaders, HttpParams } from '@angular/common/http';
 })
 export class LoginService {
 
+  public info:IUser;
   constructor(private httpClient: HttpClient,) { }
   getLogin(username: string, password:string) {
     //data:IUser;
@@ -18,14 +19,15 @@ export class LoginService {
       action:'login'
     }});
     try{
-      let info=JSON.parse(localStorage.getItem('currentUser'));
-      //console.log(info[0].phassphrase);
-      if(info[0].phassphrase)
+     
+      this.info=JSON.parse(localStorage.getItem('currentUser'))[0];
+     // console.log(this.info);
+      if(this.info.hasOwnProperty('passphrase'))
       {
          params= new HttpParams({fromObject: {
           username: username,
           password: password,
-          phassphrase:info[0].phassphrase,
+          passphrase:this.info.passphrase,
           action:'login'
         }});
 

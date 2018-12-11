@@ -5,7 +5,7 @@ import {IUser} from '../../common/interfaces/i.user.cmp';
 
 import { MatSpinner } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
-
+import{RouterModule,Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -27,8 +27,8 @@ export class LoginComponent implements OnInit {
     password:new FormControl('',[Validators.required])
    
  });
-  constructor(public Info:LoginService
-    ) { 
+  constructor(public Info:LoginService, 
+    public route: Router    ) { 
     //public Info: LoginService;
     //this.Info=new LoginService(http);
     //Info.status=true;
@@ -51,6 +51,7 @@ export class LoginComponent implements OnInit {
           {
             this.User=response.data;
             localStorage.setItem('currentUser', JSON.stringify(this.User));
+            this.route.navigate(['front']);
             this.hint=false;
           }
           else

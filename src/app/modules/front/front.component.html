@@ -1,0 +1,54 @@
+<div class="wrapper">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <img class="mat-toolbar-logo" src="https://medios.marketbi.co/market/images/logo.jpg" />&nbsp;
+      <span class="spacer"></span>
+      Usuario: &nbsp;<span class="name">{{User.name}}</span>
+    
+      <mat-icon class="icons" (click)="logOut()" >account_box</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="content">
+    <div class="bar">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon class="icons">timeline</mat-icon>Campañas
+          </mat-panel-title>
+          <mat-panel-description>
+            
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+      
+        <mat-list>
+          <mat-list-item> Crear Campaña </mat-list-item>
+          <mat-list-item> Ver Campañas </mat-list-item>
+          <mat-list-item (click)="iniciaCampana()">Gestion </mat-list-item>
+         </mat-list>
+         
+      
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+           <mat-icon class="icons">build</mat-icon>Configuración
+          </mat-panel-title>
+          <mat-panel-description>
+            
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+      
+        <mat-list>
+          <mat-list-item>Correo</mat-list-item>
+          <mat-list-item> Sms </mat-list-item>
+          <mat-list-item> Inactividad </mat-list-item>
+         </mat-list>
+         
+      
+      </mat-expansion-panel>
+    </div>
+    <div class="contentall">
+      <router-outlet name="content"></router-outlet>
+    </div>
+  </div>
+</div>
