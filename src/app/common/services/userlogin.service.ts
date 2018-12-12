@@ -13,7 +13,7 @@ export class UserloginService {
     try{
 
       this.User=JSON.parse(localStorage.getItem('currentUser'))[0];
-      //console.log(User);
+      //console.log(this.User);
       
     }
     catch(e)

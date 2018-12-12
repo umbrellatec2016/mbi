@@ -32,8 +32,8 @@
   align-items: initial;
   vertical-align: top;
   
-  width:calc(100% - 205px) !important;
-  
+  width:calc(100% - 210px) !important;
+  margin-left: 5px;
 }
 
 .mat-expansion-panel-header{

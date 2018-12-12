@@ -24,7 +24,7 @@ export class GestioncampanaComponent implements OnInit {
     this.Campana=[{id:0,
     nombre:"Sin Seleccionar",
     descripcion:"Sin Seleccionar",
-    id_cliente:'0',
+    id_cliente:null,
     idempresa:0,
     fecha_creacion:'',
     id_usuario:'',

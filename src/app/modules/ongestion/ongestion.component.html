@@ -1,4 +1,31 @@
 <div class="content">
-    <mat-card class="campaign-head"><h1>Campaña: {{campaign.id}} {{campaign.nombre}}</h1></mat-card>
+  <mat-card class="campaign-head"><h1>Campaña: {{campaign.id}} {{campaign.nombre}}</h1>
+    <br/>
+    <div class="head1">
+          <mat-form-field>
+            <input matInput value="CLIENTE" placeholder="CLIENTE" value="{{campaign.id_cliente.nombre}}" readonly #message>
+          </mat-form-field>
+          <mat-form-field>
+              <input matInput value="FECHA CREACION" placeholder="FECHA CREACION" value="{{campaign.fecha_creacion}}" readonly #message>
+          </mat-form-field>
+    </div>
+  </mat-card>
+  <mat-card class="gestion-contactos">
+    <mat-card-header>
+      <mat-card-title>Gestion de Contactos y filtros</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="buttons-group-filters">
+        <div class="buttons-contact"><button mat-button color="primary"><mat-icon class="icons"  >add_to_queue</mat-icon><br>Siguiente</button></div>
+        <div class="buttons-contact"><button mat-button color="primary"><mat-icon class="icons"  >spa</mat-icon><br>Liberar</button></div>
+      </div>
+      <div class="select-group-filters">
+        empresa
+      </div>
+    </mat-card-content>
+  </mat-card>
+    <br/>
+    
+      
 
 </div>

@@ -4,6 +4,7 @@ export interface IUser{
     name:string;
     id:number;
     lastlogin:string;
+    exten:string;
 }
 export interface IUserWS{
     status: boolean;
