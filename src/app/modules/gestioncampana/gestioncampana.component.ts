@@ -34,7 +34,7 @@ export class GestioncampanaComponent implements OnInit {
 
   ngOnInit() {
     this.loadData();
-    console.log(this.Campana);
+    //console.log(this.Campana);
     this.filteredOptions = this.campanaForm.valueChanges
       .pipe(
         startWith(''),

@@ -20,7 +20,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { GestioncampanaComponent } from './modules/gestioncampana/gestioncampana.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { OngestionComponent } from './modules/ongestion/ongestion.component';
-
+import {MatSelectModule} from '@angular/material/select';
 const Routes:Routes=[
   {path:'',component:HomeComponent},
   {path:'login', component:LoginComponent},
@@ -55,7 +55,8 @@ const Routes:Routes=[
     HttpClientModule,
     MatExpansionModule,
     MatListModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,7 @@
+import { ICiudad } from "./i.ciudad.cmp";
+import { IDepartamento } from "./i.departamento.cmp";
+import { IPais } from "./i.pais.cmp";
+
 export interface IEmpresa{
     id:number;
     nombre:string;
@@ -5,12 +9,11 @@ export interface IEmpresa{
     direccion:string;
     telefonoa:string;
     telefonob:string;
-    id_ciudad:number;
-    id_departamento:number;
-    ceo:string;
+    id_ciudad:ICiudad;
+    id_departamento:IDepartamento
     vertical:string;
     email:string;
-    id_pais:number;
+    id_pais:IPais;
     no_empleados:number;
     ingresos_anuales:string;
     descripcion:string;
