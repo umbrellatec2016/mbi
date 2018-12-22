@@ -21,7 +21,8 @@ h1{
 }
 .gestion-contactos{
     margin-top:10px;
-    width: 50%;
+    width: 45%;
+    display: inline-block;
 }
 .gestion-contactos mat-card-title{
     font-size: 13px;
@@ -56,4 +57,28 @@ h1{
   
   .example-full-width {
     width: 100%;
+  }
+  .inline{
+      display: inline-block;
+      padding: 5px 0px 5px 5px;
+  }
+
+  .gestion-empresa{
+    width: 47%;
+
+    display: inline-block;
+    
+    margin-left: 20px;
+    
+    vertical-align: top;
+    
+    margin-top: 10px;
+    
+    align-self: end;
+    
+    float: right;
+
+  }
+  .margin-left{
+      margin-left: 10px;
   }

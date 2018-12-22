@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { IUser } from '../../common/interfaces/i.user.cmp';
 import { LoginService } from '../../common/services/s.login.service';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { UserloginService } from 'src/app/common/services/userlogin.service';
+import { UserloginService } from '../../common/services/userlogin.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -37,5 +37,5 @@ export class FrontComponent implements OnInit {
   iniciaCampana(){
     this.router.navigate(['front/',{ outlets: { 'content': ['gestionCampana']}}]);
   }
-
+  logOut(){}
 }

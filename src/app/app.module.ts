@@ -21,7 +21,7 @@ import { GestioncampanaComponent } from './modules/gestioncampana/gestioncampana
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { OngestionComponent } from './modules/ongestion/ongestion.component';
 import {MatSelectModule} from '@angular/material/select';
-const Routes:Routes=[
+const Routess:Routes=[
   {path:'',component:HomeComponent},
   {path:'login', component:LoginComponent},
   {path:'front',component:FrontComponent,children:[{
@@ -42,7 +42,7 @@ const Routes:Routes=[
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(Routes),
+    RouterModule.forRoot(Routess),
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,

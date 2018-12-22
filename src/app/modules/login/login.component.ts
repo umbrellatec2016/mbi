@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   
     public loader:boolean=true;
     public hint:boolean=false;
+    public hide;
   //  private htt:HttpClient;
  // username= new FormControl('');
  //public Info:LoginService=new LoginService();

@@ -20,38 +20,84 @@
         <div class="buttons-contact"><button mat-button color="primary"><mat-icon class="icons"  >spa</mat-icon><br>Liberar</button></div>
       </div>
       <div class="select-group-filters">
-        <form class="selectEmpresaForm" [formGroup]="selectEmpresaForm">
-          <mat-form-field class="example-full-width">
-            <!--<input type="text" placeholder="Empresas" aria-label="Assignee" matInput formControlName="empresaSelect" [matAutocomplete]="auto">
-            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayEmpresasFn">
-              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                {{option.id_cliente.nombre}}
-              </mat-option>
-            </mat-autocomplete>-->
-            <mat-select placeholder="Empresas Asignadas" formControlName="empresaSelect">
-              <mat-option *ngFor="let option of Campaigns"  [value]="option.id_cliente" >
-                {{option.id_cliente.nombre}}
-              </mat-option>
-            </mat-select>
-           
-          </mat-form-field>
-          <div>
-              <mat-form-field>
-                <mat-select placeholder="FiltroPais" formControlName="paisSelect">
-                <mat-option *ngFor="let option of Campaigns"  [value]="option.id_cliente" >
-                 {{option.id_cliente.nombre}}
-                </mat-option>
-                </mat-select>
+       
           
+            <form class="selectEmpresaForm" [formGroup]="selectEmpresaForm">
+              <mat-form-field class="example-full-width">
+                
+                <mat-select placeholder="Empresas Asignadas" formControlName="empresaSelect" >
+                  <mat-option *ngFor="let option of Campaigns"  [value]="option.id_contacto" >
+                    {{option.id_contacto.nombre}}
+                  </mat-option>
+                </mat-select>
+              
               </mat-form-field>
-          </div>
-          <div></div>
-          <div></div>
-        </form>
-        
+              <div class="inline">
+                  <mat-form-field>
+                    <mat-select placeholder="FiltroPais" formControlName="paisSelect" (selectionChange)="filterPais()">
+                    <mat-option *ngFor="let options of datapaises"  [value]="options.id" >
+                    {{options.nombre}}
+                    </mat-option>
+                    </mat-select>
+              
+                  </mat-form-field>
+              </div>
+              <div class="inline"> 
+                <mat-form-field>
+                  <mat-select placeholder="Filtro Departamento" formControlName="deparmentSelect">
+                  <mat-option *ngFor="let options of datadepartament"  [value]="options.id" >
+                  {{options.nombre}}
+                  </mat-option>
+                  </mat-select>
+            
+                </mat-form-field>
+              </div>
+              <div>
+                
+                  <mat-form-field>
+                    <mat-select placeholder="Filtro Ciudad" formControlName="ciudadSelect">
+                    <mat-option *ngFor="let options of datacities"  [value]="options.id" >
+                    {{options.nombre}}
+                    </mat-option>
+                    </mat-select>
+              
+                  </mat-form-field>
+              </div>
+       
+            </form>
+         
+    
       </div>
     </mat-card-content>
   </mat-card>
+  <mat-card class="gestion-empresa">
+    <mat-card-header>
+      <mat-card-title>Empresa: {{current.nombre}} </mat-card-title>
+    </mat-card-header>
+    <mat-card-content> 
+        <mat-icon>call</mat-icon>
+      <mat-form-field class="margin-left">
+      <input matInput  placeholder="Telefono Principal" value="{{current.telefonoa}} - {{current.id_ciudad.indicativo}}" readonly #message>
+    </mat-form-field>
+    <mat-icon>call</mat-icon>
+    <mat-form-field  class="margin-left">
+        <input matInput  placeholder="Telefono Secundario" value="{{current.telefonob}} - {{current.id_ciudad.indicativo}}" readonly #message>
+    </mat-form-field>
+    <mat-form-field  class="margin-left">
+        <input matInput  placeholder="Ciudad" value="{{current.id_ciudad.nombre}}" readonly #message>
+    </mat-form-field>
+    <br/>
+    <mat-form-field  class="margin-left">
+        <input matInput  placeholder="Departamento" value="{{current.id_departamento.nombre}}" readonly #message>
+    </mat-form-field>
+    <mat-form-field  class="margin-left">
+        <input matInput  placeholder="Pais" value="{{current.id_pais.nombre}}" readonly #message>
+    </mat-form-field>
+    <mat-form-field  class="margin-left">
+        <input matInput  placeholder="Vertical" value="{{current.vertical}}" readonly #message>
+    </mat-form-field>
+    </mat-card-content>
+    </mat-card>
     <br/>
    
     
